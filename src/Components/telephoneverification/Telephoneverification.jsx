@@ -99,8 +99,6 @@ export default function Telephoneverification() {
   };
 
   //RENDER
-  console.log(phone);
-
   return (
     <div className="telephone-verification">
       <Stack mt={2} spacing={2}>
