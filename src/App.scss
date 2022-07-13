@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  // background-image: url('./Assets/bg-image.jpg');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // width: 100%;
+  // min-height: 100vh;
+  .bg-image {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+    img {
+      position: relative;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .phone-email {
+    margin: 1%;
+    .sub-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @media only screen and (max-width: 600px) {
+        flex-flow: column;
+      }
+    }
+    .refresh-button{
+      margin: 4%;
+      position: relative;
+      direction: rtl;
+    }
+  }
+
+  .countries {
+    margin-left: 0;
+  }
+}
