@@ -1,5 +1,5 @@
 import "./App.scss";
-import React, { useState } from "react";
+import React from "react";
 import Emailverification from "./Components/emailverification/Emailverification";
 import Telephoneverification from "./Components/telephoneverification/Telephoneverification";
 import { ToastContainer } from "react-toastify";
@@ -12,6 +12,7 @@ function App() {
       <div className="bg-image">
         <img alt="a unique image" src={background} />
       </div>
+      {/* this is the notification container */}
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -26,11 +27,13 @@ function App() {
 
       <div className="phone-email">
         <div className="sub-div">
+          {/* telephone verification container */}
           <Telephoneverification />
+          {/* email verification container */}
           <Emailverification />
         </div>
         <div className="refresh-button">
-          <Button variant="contained" color="secondary" onClick={()=>{window.location.reload(false)}}>Clear</Button>
+          <Button variant="contained" color="secondary" onClick={()=>{window.location.reload(false)}}>Refresh</Button>
         </div>
       </div>
     </div>

@@ -35,9 +35,12 @@ export default function Telephoneverification() {
 
   //FUNCTIONS
   const handlevalidate = () => {
+    //this checks phone number validity
     const isValid = isValidPhoneNumber(phone);
+    
     var message = "";
     if (isValid) {
+      //if phone number is valid
       message = "This is valid phone number." + " Let" + "s verify it!";
       toast.success(message);
       // configureCaptcha();
@@ -62,6 +65,7 @@ export default function Telephoneverification() {
       auth
     );
   };
+  //this function is called when user clicks on verify button
   const onSignInSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
@@ -80,6 +84,7 @@ export default function Telephoneverification() {
         setLoading(false);
       });
   };
+  //this function is called when user clicks on otp verification button
   const verifyOtp = () => {
     if (cf === null) {
       toast.error("please otp first");
@@ -99,6 +104,7 @@ export default function Telephoneverification() {
   };
 
   //RENDER
+
   return (
     <div className="telephone-verification">
       <Stack mt={2} spacing={2}>
