@@ -34,10 +34,6 @@ export default function Emailverification() {
       toast.error("can't have more than one @ in email");
       return;
     }
-    if(email.split(".").length-1 >= 2){
-      toast.error("can't have more than one . in email");
-      return;
-    }
     let st = email.split("@");//split the email into two parts
     if (st.length < 2) { 
       //if the email is not valid
